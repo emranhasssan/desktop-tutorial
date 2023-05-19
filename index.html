@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Changing Background</title>
+    <style>
+        body {
+            background-color: #fff6d5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Changing Background</h1>
+    <p>The background color of this page will change every second.</p>
+    <script>
+        // Create an array of colors to cycle through
+        var colors = ["#fff6d5", "#ff7f50", "#ffff7f", "#90ee90", "#add8e6"];
+        // Set the starting index
+        var index = 0;
+
+        // Use setInterval() to call the changeColor() function every 1000 milliseconds (1 second)
+        setInterval(changeColor, 1000);
+
+        function changeColor() {
+            // Update the body's background color
+            document.body.style.backgroundColor = colors[index];
+            // Increment the index (loop back to 0 when it reaches the end of the array)
+            index = (index + 1) % colors.length;
+        }
+    </script>
+</body>
+</html>
